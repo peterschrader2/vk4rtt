@@ -1,1 +1,42 @@
+V1.0 Peter Schrader - VK4EA - 12/10/2026
+VK4RTT 2m and 6m beacon controller/supervisor
 
+Main components of the beacon are 2 x RF-Zero (https://rfzero.net/) configured like this
+
+2m - loaded with Q65 beacon program (https://rfzero.net/examples/beacons/q65-cw-carrier/)
+FREQ 144440 kHz
+MODE Q65b
+GPS wait is true
+GPS output is all
+Power is maximum
+no display configured
+everything else is default
+
+6m - loaded with JT65 beacon program (https://rfzero.net/examples/beacons/jt65-cw-carrier/)
+FREQ 50284 kHz
+MODE JT65a
+GPS wait is true
+GPS output is all
+power is maximum
+no display configured
+
+Two Mitsubishi based PAs boost the RF to the 15W vicinity.
+
+W6PQL LPF boards provide VSWR bridges as well as Low Pass Filtering.
+
+Two DS18B20 Dallas Semiconductor probes for PA heatsink temperatures
+
+VSWR forward and reverse power measurements collected using an Arduino R3 Uno via a prototyping shield fitted with a resistor/capacitor filter for each analogue measurement.
+
+The DS18820 sensors are connected to the 1 wire collection pins and bit bashed
+
+Central supervisor controller is a Raspberry PI 4 running Debian 64 bit Linux.
+- NodeRed
+- Virtual Python3 environment #source /home/vk4rtt/vk4rtt/bin/activate
+  - Pyhton3 modules - Paho MQQT, Serial, Math
+
+The NodeRed flow provides the web browser dashboard (Dashboard 2.0) to allow manual controls for
+- 6m and 2m PA 12 VDC supply
+- 6m and 2m PA PTT
+- 2m PA heatsink
+- 6
