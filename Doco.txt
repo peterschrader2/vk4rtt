@@ -1,6 +1,18 @@
 V1.0 Peter Schrader - VK4EA - 12/10/2026
 VK4RTT 2m and 6m beacon controller/supervisor
 
+Meanwell 240 VAC to 12 VDC 300 Watt switchmode power supply.  All circuits supplied via ATC blade (automotive) fuses).
+
+Front panel are 6 toggle switches.  Middle is OFF, UP is under remote, DOWN is manual ON
+
+Starting from the left and moving to the right
+SW1 - 6m PA supply
+SW2 - 6m PTT
+SW3 - 6m Fan
+SW4 - 2m PA supply
+SW5 - 2m PTT
+SW6 - 2m Fan
+
 Main components of the beacon are 2 x RF-Zero (https://rfzero.net/) configured like this
 
 2m - loaded with Q65 beacon program (https://rfzero.net/examples/beacons/q65-cw-carrier/)
@@ -24,19 +36,42 @@ Two Mitsubishi based PAs boost the RF to the 15W vicinity.
 
 W6PQL LPF boards provide VSWR bridges as well as Low Pass Filtering.
 
-Two DS18B20 Dallas Semiconductor probes for PA heatsink temperatures
+Two DS18B20 Dallas Semiconductor probes for PA heatsink temperatures connected in 1 wire parallel arrangement.
 
 VSWR forward and reverse power measurements collected using an Arduino R3 Uno via a prototyping shield fitted with a resistor/capacitor filter for each analogue measurement.
 
-The DS18820 sensors are connected to the 1 wire collection pins and bit bashed
+The DS18820 sensors are connected to the 1 wire collection pins and bit bashed using the Arduino sketch into a single line serial stream at 9600 baud containing the two temperatures and the 4 VSWR bridge voltages (forward and reverse).
 
 Central supervisor controller is a Raspberry PI 4 running Debian 64 bit Linux.
 - NodeRed
 - Virtual Python3 environment #source /home/vk4rtt/vk4rtt/bin/activate
   - Pyhton3 modules - Paho MQQT, Serial, Math
+  
+  Not all Python scripts in the repo are utilised - some are backed up for future reference for when I forget how to do stuff
 
 The NodeRed flow provides the web browser dashboard (Dashboard 2.0) to allow manual controls for
 - 6m and 2m PA 12 VDC supply
 - 6m and 2m PA PTT
-- 2m PA heatsink
-- 6
+- 6m and 2m PA heatsink fan
+- Raspberry PI fan
+- RF-Zero 5V VDC power supplies
+
+The relays under control are a Waveshare board (https://www.waveshare.com/rpi-relay-board-b.htm).  NodeRed nodes directly interface with these relays using Raspberry PI GPIO assignments.
+
+Power supply voltages and currents are measured using a Sequent Microsystems HAT (https://sequentmicrosystems.com/products/building-automation-8-layer-stackable-hat-for-raspberry-pi) .
+
+2 x 12 VDC voltages are directly connected to the HAT inputs, currents are measured using 2 x Hall Affect sensors - outputs connected to the Analogue HAT and scaled in software to indicate the actual DC current consumed by the PAs.
+
+The NodeRed flow contains a number of EXEC nodes that execute the associated Python script that reads the appropriate HAT input and passes on the measurement in the JSON payload to the destination nodes.
+
+Analogue gauges show the actual measurement in primary units.  The gauge will be red if a threshold has been exceeded.
+
+No alarms have been configured at time of writing V1.0 of this document.
+
+The RF-Zeros sometimes get into a state where a continuous carrier is output rather than cycling through the carrier, CW and digital mode.  A work around node arrangement is in place to cycle the 5 VDC supply to the RF-Zeros every Monday morning at 1 AM.  Manual buttons are available on the dashboard to control the power supply in case a lock up occurs before the scheduled restart.
+
+Two python scripts are in place to parse the NMEA sentences output on the USB serial to establish whether the on board GNSS receivers are in lock.  These status's are displayed on the dashboard.  Note that if the GNSS receiver is not locked the RFZero may not output the digital modulation.
+
+In addition to the dashboard display all measurements and status's are published to an local MQTT broker AND in parallel published to iot.coreflux.cloud under the vk4rtt topic.
+
+For simplicity (and the fact I am a rubbish coder) some dashboard items are pulled from MQTT topics published directly by Python scripts.  Saved a bunch of clever code that I could not be bothered developing using the AI between my ears.
