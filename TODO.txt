@@ -1,0 +1,10 @@
+- Control heatsink fans based on temperatures with a hysterysis to minimise switching
+- Control Raspberry PI fan as above
+- Implement VSWR warnings
+- implement VSWR shutdown - but how to re-enable?
+- Implement high temp warnings
+- Grafana dashboard for external - untrusted users
+- modify RFZeros to remove USB port power - care to ensure /dev/tty assignments are consistent when power reapplied.  A number of scripts have the port designations hard coded
+- https Dashboard 2.0
+
+
