@@ -1,0 +1,3524 @@
+[
+    {
+        "id": "d585b91520bff718",
+        "type": "tab",
+        "label": "CMD Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bf3142932354a734",
+        "type": "mqtt-broker",
+        "name": "remote",
+        "broker": "iot.coreflux.cloud",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f3c8eecf3bcc8d27",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "navigationStyle": "default",
+        "titleBarStyle": "default"
+    },
+    {
+        "id": "b25cad97ce80cfc1",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "32313c29d445bed3",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "f3c8eecf3bcc8d27",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b25cad97ce80cfc1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "21aaf6e53abb30ed",
+        "type": "ui-group",
+        "name": "6m Controls",
+        "page": "32313c29d445bed3",
+        "width": "1",
+        "height": "1",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "28974031786aebb5",
+        "type": "ui-group",
+        "name": "2m Control",
+        "page": "32313c29d445bed3",
+        "width": "1",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "5b41b64e65add873",
+        "type": "ui-group",
+        "name": "Raspberry PI",
+        "page": "32313c29d445bed3",
+        "width": "1",
+        "height": "1",
+        "order": 5,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "63abf6cdafb33278",
+        "type": "mqtt-broker",
+        "name": "local",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "63188d10bd52f9d1",
+        "type": "ui-group",
+        "name": "2m gauges",
+        "page": "32313c29d445bed3",
+        "width": "1",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "21cea904e17565ba",
+        "type": "ui-group",
+        "name": "6m gauges",
+        "page": "32313c29d445bed3",
+        "width": "1",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b6992cd57d0d8d0c",
+        "type": "ui-group",
+        "name": "RF Zero",
+        "page": "32313c29d445bed3",
+        "width": "1",
+        "height": 1,
+        "order": 6,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "fc313a4f60187b7c",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "6",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 720,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4d40e83dfa9c747d",
+        "type": "ui-switch",
+        "z": "d585b91520bff718",
+        "name": "6m PA Bias",
+        "label": "6m PA Bias",
+        "group": "21aaf6e53abb30ed",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "fc313a4f60187b7c",
+                "f560fe6ff51f8661",
+                "9b31520bd80e2929"
+            ]
+        ]
+    },
+    {
+        "id": "a47f371cf53edef2",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "5",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 720,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "89bd2d804bfce949",
+        "type": "ui-switch",
+        "z": "d585b91520bff718",
+        "name": "6m PA 12V",
+        "label": "6m PA 12V",
+        "group": "21aaf6e53abb30ed",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "a47f371cf53edef2",
+                "8639a7f8a0bb484f",
+                "42c275ef0d817e6f"
+            ]
+        ]
+    },
+    {
+        "id": "28cc45059c37aed6",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "19",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 520,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "14627ec72b80eb3f",
+        "type": "ui-switch",
+        "z": "d585b91520bff718",
+        "name": "2m PA Bias",
+        "label": "12 PA Bias",
+        "group": "28974031786aebb5",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 310,
+        "y": 1020,
+        "wires": [
+            [
+                "28cc45059c37aed6",
+                "d3188f25d5097430",
+                "e8404906d46bf79e"
+            ]
+        ]
+    },
+    {
+        "id": "038f0d1cc72fe3b1",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "16",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 540,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "533e2fa7b084f4fc",
+        "type": "ui-switch",
+        "z": "d585b91520bff718",
+        "name": "2m PA 12V",
+        "label": "2m PA 12V",
+        "group": "28974031786aebb5",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 270,
+        "y": 1120,
+        "wires": [
+            [
+                "038f0d1cc72fe3b1",
+                "9a02662cef5ffcd9",
+                "0bc555d294de5456"
+            ]
+        ]
+    },
+    {
+        "id": "e68eeef5a2d3fa22",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "20",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 520,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "3801134cd9fae85b",
+        "type": "ui-switch",
+        "z": "d585b91520bff718",
+        "name": "2m PA Fan",
+        "label": "2m PA Fan",
+        "group": "28974031786aebb5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 210,
+        "y": 1220,
+        "wires": [
+            [
+                "e68eeef5a2d3fa22",
+                "453648ae3bec84d5",
+                "c9adf32bd090b294"
+            ]
+        ]
+    },
+    {
+        "id": "94e2123de7ac5d7b",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "13",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 720,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "cc34f545f7876e5e",
+        "type": "ui-switch",
+        "z": "d585b91520bff718",
+        "name": "6m Fan",
+        "label": "6m Fan",
+        "group": "21aaf6e53abb30ed",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "94e2123de7ac5d7b",
+                "9a1cb5ec501c5ccc",
+                "5a32bdbbe4bf5894"
+            ]
+        ]
+    },
+    {
+        "id": "f169b785edf7e488",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 320,
+        "wires": [
+            [
+                "7b68358214fb6c52"
+            ]
+        ]
+    },
+    {
+        "id": "7b68358214fb6c52",
+        "type": "exec",
+        "z": "d585b91520bff718",
+        "command": "python3 /home/vk4rtt/vk4rtt/two_volts.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1920,
+        "y": 320,
+        "wires": [
+            [
+                "2b00559befaa5a85",
+                "4c2a6cc99bf06afe",
+                "f40d067ce599bffc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4c2a6cc99bf06afe",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "",
+        "group": "63188d10bd52f9d1",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "2m volts",
+        "alwaysShowTitle": false,
+        "units": "Volts",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "11",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "13",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "14",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "15",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2220,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b00559befaa5a85",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_volts",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 2240,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "18c7cc4fd9bedf9d",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "2m Heatsink",
+        "group": "63188d10bd52f9d1",
+        "order": 6,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "2m Heatsink",
+        "alwaysShowTitle": false,
+        "units": "Degrees C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 490,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4eaab24198398c56",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/Two_Heat",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 1360,
+        "wires": [
+            [
+                "18c7cc4fd9bedf9d",
+                "c972417805770ecb"
+            ]
+        ]
+    },
+    {
+        "id": "9d44526a4231da2c",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "6m Heatsink",
+        "group": "21cea904e17565ba",
+        "order": 6,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "6m Heatsink",
+        "alwaysShowTitle": false,
+        "units": "Degrees C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 510,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3dff0699372d33a",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/Six_Heat",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 300,
+        "y": 740,
+        "wires": [
+            [
+                "9d44526a4231da2c",
+                "7c9b7024f2320f63"
+            ]
+        ]
+    },
+    {
+        "id": "8eaefd7ff4ee0cf7",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 740,
+        "wires": [
+            [
+                "2ba8867fce5f00b4"
+            ]
+        ]
+    },
+    {
+        "id": "2ba8867fce5f00b4",
+        "type": "exec",
+        "z": "d585b91520bff718",
+        "command": "python3 /home/vk4rtt/vk4rtt/cpu_temp.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1920,
+        "y": 740,
+        "wires": [
+            [
+                "aa992faf89fe363a",
+                "9c452cbab14157ad",
+                "99235d490d3befe8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9c452cbab14157ad",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "CPU Temp",
+        "group": "5b41b64e65add873",
+        "order": 5,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "CPU Temp",
+        "alwaysShowTitle": false,
+        "units": "Degrees C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2230,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa992faf89fe363a",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/CPU_Temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 2250,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "9a981065068a189f",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 860,
+        "wires": [
+            [
+                "26b6a028030808f1"
+            ]
+        ]
+    },
+    {
+        "id": "26b6a028030808f1",
+        "type": "exec",
+        "z": "d585b91520bff718",
+        "command": "python3 /home/vk4rtt/vk4rtt/disk_used.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1920,
+        "y": 860,
+        "wires": [
+            [
+                "17dd65855dfc4355",
+                "e6eef5128ce0d4ae",
+                "261e2d262d9a02cb"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e6eef5128ce0d4ae",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "Disk Used",
+        "group": "5b41b64e65add873",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Disk Used",
+        "alwaysShowTitle": false,
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "90",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2230,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "17dd65855dfc4355",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/Disk_Used",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 2250,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "1ccfbdcf60173044",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 980,
+        "wires": [
+            [
+                "eb65bdfee4c1e1d1"
+            ]
+        ]
+    },
+    {
+        "id": "eb65bdfee4c1e1d1",
+        "type": "exec",
+        "z": "d585b91520bff718",
+        "command": "python3 /home/vk4rtt/vk4rtt/ram_used.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1920,
+        "y": 980,
+        "wires": [
+            [
+                "e5812e33d5406e4a",
+                "01ed392519c5a11c",
+                "d415bdde7b4b4cc8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "01ed392519c5a11c",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "Ram Used",
+        "group": "5b41b64e65add873",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Ram Used",
+        "alwaysShowTitle": false,
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "60",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "80",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2230,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e5812e33d5406e4a",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/Ram_Used",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 2250,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "648e064d96acf33f",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 160,
+        "wires": [
+            [
+                "d2fb2dc7dac871a9"
+            ]
+        ]
+    },
+    {
+        "id": "d2fb2dc7dac871a9",
+        "type": "exec",
+        "z": "d585b91520bff718",
+        "command": "python3 /home/vk4rtt/vk4rtt/two_amps.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1920,
+        "y": 140,
+        "wires": [
+            [
+                "40276345e0af9637",
+                "aa562b641945076a",
+                "df9151c5d06ff3cd"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "aa562b641945076a",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "",
+        "group": "63188d10bd52f9d1",
+        "order": 5,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "2m Amps",
+        "alwaysShowTitle": false,
+        "units": "Amps",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "5",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "6",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "6",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2240,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40276345e0af9637",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_amps",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 2260,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f560fe6ff51f8661",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "6m PA Bias",
+        "group": "21aaf6e53abb30ed",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "label": "6m PA Bias",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 730,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8639a7f8a0bb484f",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "6m PA 12V",
+        "group": "21aaf6e53abb30ed",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "label": "6m PA 12V",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d3188f25d5097430",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "2m PA Bias",
+        "group": "28974031786aebb5",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "label": "2m PA Bias",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "9a02662cef5ffcd9",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "2m PA 12V",
+        "group": "28974031786aebb5",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "label": "2m PA 12V",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "453648ae3bec84d5",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "2m PA FAN",
+        "group": "28974031786aebb5",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "label": "2m PA Fan",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 790,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "9a1cb5ec501c5ccc",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "6m Fan",
+        "group": "21aaf6e53abb30ed",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "label": "6m Fan",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 720,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8e11147854cbbaf3",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 460,
+        "wires": [
+            [
+                "c5ea6c4889dc1373"
+            ]
+        ]
+    },
+    {
+        "id": "c5ea6c4889dc1373",
+        "type": "exec",
+        "z": "d585b91520bff718",
+        "command": "python3 /home/vk4rtt/vk4rtt/six_volts.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1920,
+        "y": 460,
+        "wires": [
+            [
+                "a922d55d36380767",
+                "c6ec6c547b16dec8",
+                "4a2f8da93fe7c6e0"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c6ec6c547b16dec8",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "",
+        "group": "21cea904e17565ba",
+        "order": 4,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "6m volts",
+        "alwaysShowTitle": false,
+        "units": "Volts",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "11",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "14",
+                "color": "#e0ea53",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "15",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "15",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2220,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a922d55d36380767",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_volts",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 2240,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "05b8d8f99fd41004",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1630,
+        "y": 600,
+        "wires": [
+            [
+                "637efd4ca1ecdfee"
+            ]
+        ]
+    },
+    {
+        "id": "637efd4ca1ecdfee",
+        "type": "exec",
+        "z": "d585b91520bff718",
+        "command": "python3 /home/vk4rtt/vk4rtt/six_amps.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1920,
+        "y": 600,
+        "wires": [
+            [
+                "2de535202b6b2a53",
+                "53edb82a8ff9ad83",
+                "b370b3bf53ed71cd"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "53edb82a8ff9ad83",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "",
+        "group": "21cea904e17565ba",
+        "order": 5,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "6m Amps",
+        "alwaysShowTitle": false,
+        "units": "Amps",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "1",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "5",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "6",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "6",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 2220,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2de535202b6b2a53",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_amps",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 2240,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8df34c8339f4170a",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "Turn off indicator on restart",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "f560fe6ff51f8661",
+                "8639a7f8a0bb484f",
+                "9a1cb5ec501c5ccc",
+                "d3188f25d5097430",
+                "9a02662cef5ffcd9",
+                "453648ae3bec84d5",
+                "59683692a45b0e15",
+                "0bd29da80750bf30"
+            ]
+        ]
+    },
+    {
+        "id": "090cb3858a938756",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "Auto start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [
+                "3801134cd9fae85b",
+                "533e2fa7b084f4fc",
+                "14627ec72b80eb3f",
+                "cc34f545f7876e5e",
+                "89bd2d804bfce949",
+                "4d40e83dfa9c747d",
+                "37ed7cbbcb51b0a5",
+                "67ee12a5bc222199"
+            ]
+        ]
+    },
+    {
+        "id": "f08d916229ddc413",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_Bias",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 920,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9b31520bd80e2929",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 710,
+        "y": 140,
+        "wires": [
+            [
+                "f08d916229ddc413",
+                "1fd5640509953b87"
+            ]
+        ]
+    },
+    {
+        "id": "cbb71c9ffeceeffa",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_PA",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 910,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "42c275ef0d817e6f",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "cbb71c9ffeceeffa",
+                "3049347af8aa86e5"
+            ]
+        ]
+    },
+    {
+        "id": "5afa8d940260b6d7",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_Fan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 920,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "5a32bdbbe4bf5894",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 690,
+        "y": 460,
+        "wires": [
+            [
+                "5afa8d940260b6d7",
+                "766cbde9dde6cb31"
+            ]
+        ]
+    },
+    {
+        "id": "185ce23c5ef30ce5",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_PA",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 970,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "e8404906d46bf79e",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 770,
+        "y": 1000,
+        "wires": [
+            [
+                "185ce23c5ef30ce5",
+                "af7780ab49292c23"
+            ]
+        ]
+    },
+    {
+        "id": "eca3d55e6f507390",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_PA",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 970,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "0bc555d294de5456",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 770,
+        "y": 1160,
+        "wires": [
+            [
+                "eca3d55e6f507390",
+                "4871eeceb5c0cd2b"
+            ]
+        ]
+    },
+    {
+        "id": "c11836322dd5d57d",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_Fan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 980,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "c9adf32bd090b294",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 770,
+        "y": 1320,
+        "wires": [
+            [
+                "c11836322dd5d57d",
+                "f968d03d7159e4f7"
+            ]
+        ]
+    },
+    {
+        "id": "adb4e19af047517a",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "2m Forward",
+        "group": "63188d10bd52f9d1",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "2m Forward",
+        "alwaysShowTitle": false,
+        "units": "Watts",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "25",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "30",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "30",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 970,
+        "y": 1720,
+        "wires": [
+            [
+                "bccd1e6216c82eaa"
+            ]
+        ]
+    },
+    {
+        "id": "ca982571cd34a5fc",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_forward",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 610,
+        "y": 1720,
+        "wires": [
+            [
+                "e2b4e4f0b169627c"
+            ]
+        ]
+    },
+    {
+        "id": "6a9e7978a2a3e158",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "2m Reverse",
+        "group": "63188d10bd52f9d1",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "2m Reverse",
+        "alwaysShowTitle": false,
+        "units": "Watts",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "5",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "7",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 950,
+        "y": 1780,
+        "wires": [
+            [
+                "50ad22311486cf92"
+            ]
+        ]
+    },
+    {
+        "id": "5e36af5b8a2eb2e1",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_reverse",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 610,
+        "y": 1780,
+        "wires": [
+            [
+                "411112f46c4436ec"
+            ]
+        ]
+    },
+    {
+        "id": "3855502d2f86ae0b",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "2m VSWR",
+        "group": "63188d10bd52f9d1",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "2m VSWR",
+        "alwaysShowTitle": false,
+        "units": "Ratio",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "2",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "3",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 990,
+        "y": 1840,
+        "wires": [
+            [
+                "86e112bf2cd3c2b2"
+            ]
+        ]
+    },
+    {
+        "id": "37e16bcef0fe2e07",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_VSWR",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 600,
+        "y": 1840,
+        "wires": [
+            [
+                "c27fbb9a20476b56"
+            ]
+        ]
+    },
+    {
+        "id": "f8f53da7a7ea6237",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "6m Forward",
+        "group": "21cea904e17565ba",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "6m Forward",
+        "alwaysShowTitle": false,
+        "units": "Watts",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "15",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "20",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "20",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1110,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dbbbb1da546c649b",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_forward",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 790,
+        "y": 560,
+        "wires": [
+            [
+                "03533ade193c783c"
+            ]
+        ]
+    },
+    {
+        "id": "7c1be90c59fd10bd",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "6m Reverse",
+        "group": "21cea904e17565ba",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "6m Reverse",
+        "alwaysShowTitle": false,
+        "units": "Watts",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1090,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e750b3cfdc8803f0",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_reverse",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 770,
+        "y": 620,
+        "wires": [
+            [
+                "6e956b3b4e8b9e9b"
+            ]
+        ]
+    },
+    {
+        "id": "d178950e740b7c50",
+        "type": "ui-gauge",
+        "z": "d585b91520bff718",
+        "name": "6m VSWR",
+        "group": "21cea904e17565ba",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "2",
+        "height": "2",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "6m VSWR",
+        "alwaysShowTitle": false,
+        "units": "Ratio",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "2",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "3",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "3",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1110,
+        "y": 680,
+        "wires": [
+            [
+                "e8748ebfffb66ece"
+            ]
+        ]
+    },
+    {
+        "id": "4fd34ad279a0c232",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_VSWR",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 760,
+        "y": 680,
+        "wires": [
+            [
+                "2213676a67245f95"
+            ]
+        ]
+    },
+    {
+        "id": "6a044c34639ce342",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "21",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 520,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "37ed7cbbcb51b0a5",
+        "type": "ui-switch",
+        "z": "d585b91520bff718",
+        "name": "RPI Fan",
+        "label": "RPI Fan",
+        "group": "5b41b64e65add873",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 200,
+        "y": 1500,
+        "wires": [
+            [
+                "6a044c34639ce342",
+                "59683692a45b0e15",
+                "c601b57c5fe842dc"
+            ]
+        ]
+    },
+    {
+        "id": "59683692a45b0e15",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "RPI FAN",
+        "group": "5b41b64e65add873",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "label": "RPI Fan",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 780,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "cb852ea77517fb8b",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/RPI_Fan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 980,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "c601b57c5fe842dc",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 770,
+        "y": 1600,
+        "wires": [
+            [
+                "cb852ea77517fb8b",
+                "b6ce6f9f92d9ca33"
+            ]
+        ]
+    },
+    {
+        "id": "e2b4e4f0b169627c",
+        "type": "smooth",
+        "z": "d585b91520bff718",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 780,
+        "y": 1720,
+        "wires": [
+            [
+                "adb4e19af047517a"
+            ]
+        ]
+    },
+    {
+        "id": "411112f46c4436ec",
+        "type": "smooth",
+        "z": "d585b91520bff718",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 780,
+        "y": 1780,
+        "wires": [
+            [
+                "6a9e7978a2a3e158"
+            ]
+        ]
+    },
+    {
+        "id": "c27fbb9a20476b56",
+        "type": "smooth",
+        "z": "d585b91520bff718",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "20",
+        "round": "2",
+        "mult": "single",
+        "reduce": false,
+        "x": 800,
+        "y": 1840,
+        "wires": [
+            [
+                "3855502d2f86ae0b"
+            ]
+        ]
+    },
+    {
+        "id": "2213676a67245f95",
+        "type": "smooth",
+        "z": "d585b91520bff718",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "20",
+        "round": "2",
+        "mult": "single",
+        "reduce": false,
+        "x": 940,
+        "y": 680,
+        "wires": [
+            [
+                "d178950e740b7c50"
+            ]
+        ]
+    },
+    {
+        "id": "6e956b3b4e8b9e9b",
+        "type": "smooth",
+        "z": "d585b91520bff718",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 940,
+        "y": 620,
+        "wires": [
+            [
+                "7c1be90c59fd10bd",
+                "8866337cc741a2f3"
+            ]
+        ]
+    },
+    {
+        "id": "03533ade193c783c",
+        "type": "smooth",
+        "z": "d585b91520bff718",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 960,
+        "y": 560,
+        "wires": [
+            [
+                "f8f53da7a7ea6237",
+                "90398af9b7fcf156"
+            ]
+        ]
+    },
+    {
+        "id": "6660b92d79045a33",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_GNSS",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 600,
+        "y": 1940,
+        "wires": [
+            [
+                "ed5d1c580a5d5111",
+                "de80caeb12ab0ad2",
+                "450de35553814297"
+            ]
+        ]
+    },
+    {
+        "id": "ed5d1c580a5d5111",
+        "type": "ui-text",
+        "z": "d585b91520bff718",
+        "group": "b6992cd57d0d8d0c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "2m GNSS",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 840,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "f3e6b9dcfa781df6",
+        "type": "mqtt in",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_GNSS",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "63abf6cdafb33278",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 780,
+        "y": 740,
+        "wires": [
+            [
+                "da22fc1a535c52a5",
+                "28d46dc3effd3856",
+                "2355df05c1216abf"
+            ]
+        ]
+    },
+    {
+        "id": "da22fc1a535c52a5",
+        "type": "ui-text",
+        "z": "d585b91520bff718",
+        "group": "b6992cd57d0d8d0c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "6m GNSS",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1080,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "df9151c5d06ff3cd",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_amps",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 2260,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "90398af9b7fcf156",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_forward",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1290,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f40d067ce599bffc",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_volts",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 2240,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "4a2f8da93fe7c6e0",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_volts",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 2240,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b370b3bf53ed71cd",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_amps",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 2240,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "8866337cc741a2f3",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_reverse",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1270,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e8748ebfffb66ece",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_vswr",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1300,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "28d46dc3effd3856",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_gnss",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1060,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "1fd5640509953b87",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_ptt",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 930,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3049347af8aa86e5",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_pa",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 930,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "766cbde9dde6cb31",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_fan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 920,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7c9b7024f2320f63",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/6m_heatsink",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 490,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "99235d490d3befe8",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/rpi_cpu_temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 2470,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "261e2d262d9a02cb",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/rpi_disk",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 2460,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d415bdde7b4b4cc8",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/rpi_ram",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 2240,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "af7780ab49292c23",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_ptt",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 990,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "4871eeceb5c0cd2b",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_pa",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 990,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "f968d03d7159e4f7",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_fan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 980,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "c972417805770ecb",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_heatsink",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 470,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "b6ce6f9f92d9ca33",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/rpi_fan",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 970,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "bccd1e6216c82eaa",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_forward",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1210,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "50ad22311486cf92",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_reverse",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1210,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "86e112bf2cd3c2b2",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_vswr",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1200,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "de80caeb12ab0ad2",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/2m_gnss",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 860,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "2355df05c1216abf",
+        "type": "debug",
+        "z": "d585b91520bff718",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "450de35553814297",
+        "type": "debug",
+        "z": "d585b91520bff718",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "67ee12a5bc222199",
+        "type": "ui-button",
+        "z": "d585b91520bff718",
+        "group": "b6992cd57d0d8d0c",
+        "name": "RF Zeros ON",
+        "label": "RF Zeros On",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 470,
+        "y": 2320,
+        "wires": [
+            [
+                "7d0f2f276712f381",
+                "0bd29da80750bf30",
+                "828f72fc384d6310"
+            ]
+        ]
+    },
+    {
+        "id": "0bd29da80750bf30",
+        "type": "ui-led",
+        "z": "d585b91520bff718",
+        "name": "RF Zero",
+        "group": "b6992cd57d0d8d0c",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "label": "RF Zero",
+        "labelPlacement": "right",
+        "labelAlignment": "flex-start",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 760,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "7d0f2f276712f381",
+        "type": "rpi-gpio out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "pin": "26",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 700,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "501b0b50056c3e24",
+        "type": "ui-button",
+        "z": "d585b91520bff718",
+        "group": "b6992cd57d0d8d0c",
+        "name": "RF Zeros OFF",
+        "label": "RF Zeros Off",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "emulateClick": true,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 480,
+        "y": 2380,
+        "wires": [
+            [
+                "7d0f2f276712f381",
+                "0bd29da80750bf30",
+                "828f72fc384d6310"
+            ]
+        ]
+    },
+    {
+        "id": "21af47477d2c9d90",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/RF_Zeros",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "63abf6cdafb33278",
+        "x": 1040,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "f4aadb69605b9eed",
+        "type": "mqtt out",
+        "z": "d585b91520bff718",
+        "name": "",
+        "topic": "vk4rtt/RF_Zeros",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bf3142932354a734",
+        "x": 1040,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "828f72fc384d6310",
+        "type": "Invert",
+        "z": "d585b91520bff718",
+        "name": "Invert",
+        "x": 850,
+        "y": 2240,
+        "wires": [
+            [
+                "21af47477d2c9d90",
+                "f4aadb69605b9eed"
+            ]
+        ]
+    },
+    {
+        "id": "64658cad649f740b",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "Scheduled reboot OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 01 * * 1",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 2380,
+        "wires": [
+            [
+                "501b0b50056c3e24"
+            ]
+        ]
+    },
+    {
+        "id": "332e33bdf29efbcd",
+        "type": "inject",
+        "z": "d585b91520bff718",
+        "name": "Scheduled reboot ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 01 * * 1",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 2320,
+        "wires": [
+            [
+                "67ee12a5bc222199"
+            ]
+        ]
+    },
+    {
+        "id": "0451589f0f6186be",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.31.0",
+            "node-red-node-pi-gpio": "2.0.7",
+            "@flowfuse/node-red-dashboard-2-ui-led": "1.1.0",
+            "node-red-contrib-boolean-logic": "0.0.3",
+            "node-red-node-smooth": "0.1.2"
+        }
+    }
+]
